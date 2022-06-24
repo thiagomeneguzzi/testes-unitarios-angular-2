@@ -26,6 +26,12 @@ describe(ActionDirective.name, () => {
         expect(component.hasEvent()).toBeTrue()
     })
 
+    it(`(D) (@Output appAction) should emit event with payload when clicked`, () => {
+        const divEl: HTMLElement = fixture.nativeElement.querySelector('.dummy-component');
+        divEl.click()
+        expect(component.hasEvent()).toBeTrue()
+    })
+
 })
 
 @Component({
